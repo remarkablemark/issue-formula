@@ -39,6 +39,6 @@
     "globals": "15.14.0",
     "storybook": "8.4.6",
     "typescript": "5.7.2",
-    "vite": "6.0.7"
+    "vite": "6.0.9"
   }
 }
