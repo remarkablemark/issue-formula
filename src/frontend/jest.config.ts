@@ -11,6 +11,9 @@ const config: JestConfigWithTsJest = {
     },
   },
   modulePathIgnorePatterns: ['<rootDir>/src/env'],
+  moduleNameMapper: {
+    '\\.css$': 'identity-obj-proxy',
+  },
   preset: 'ts-jest',
   reporters:
     process.env.CI === 'true'
