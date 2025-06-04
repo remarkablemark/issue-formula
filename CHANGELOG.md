@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.9](https://github.com/remarkablemark/issue-formula/compare/v1.2.8...v1.2.9) (2025-06-04)
+
+
+### Build System
+
+* **manifest:** upgrade Node.js runtime from 18 to 20 ([1e661be](https://github.com/remarkablemark/issue-formula/commit/1e661be5c1838aca5bbf9b56f51224a0ada622da)), closes [#694](https://github.com/remarkablemark/issue-formula/issues/694)
+
 ## [1.2.8](https://github.com/remarkablemark/issue-formula/compare/v1.2.7...v1.2.8) (2024-11-23)
 
 ### Performance Improvements
