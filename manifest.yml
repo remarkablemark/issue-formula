@@ -4,14 +4,15 @@ modules:
     - key: issue-formula
       title: Issue Formula
       description: 'Calculate mathematical formulas with issue data.'
-      thumbnail: https://raw.githubusercontent.com/remarkablemark/jira-dashboard-gadget-issue-formula/master/icon.svg
+      thumbnail: https://raw.githubusercontent.com/remarkablemark/issue-formula/master/icon.svg
+      icon: https://raw.githubusercontent.com/remarkablemark/issue-formula/master/icon.svg
       resource: main
       resolver:
-        function: resolver
+        function: issue-formula-resolver
       edit:
         resource: main
   function:
-    - key: resolver
+    - key: issue-formula-resolver
       handler: index.handler
 
 resources:
@@ -28,4 +29,4 @@ permissions:
 app:
   id: ari:cloud:ecosystem::app/b61c9830-6619-4c99-9e7d-3cc0cdbf6423
   runtime:
-    name: nodejs18.x
+    name: nodejs20.x
