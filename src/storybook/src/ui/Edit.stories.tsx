@@ -1,6 +1,6 @@
 import '@atlaskit/css-reset';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { type ReactNode, useEffect } from 'react';
 
 import Edit from '../../../frontend/src/edit/Edit';

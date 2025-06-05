@@ -1,6 +1,6 @@
 import '@atlaskit/css-reset';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import View from '../../../frontend/src/view/View';
 
