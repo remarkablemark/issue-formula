@@ -35,7 +35,7 @@
     "@types/jest": "29.5.14",
     "@types/react": "18.2.62",
     "@types/react-dom": "18.3.1",
-    "@vitejs/plugin-react-swc": "3.7.2",
+    "@vitejs/plugin-react-swc": "3.10.1",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "5.2.0",
     "identity-obj-proxy": "3.0.0",
