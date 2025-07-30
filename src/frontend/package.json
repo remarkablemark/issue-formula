@@ -25,7 +25,7 @@
     "@atlaskit/textfield": "8.0.7",
     "@forge/bridge": "4.5.3",
     "expr-eval": "2.0.2",
-    "react": "18",
+    "react": "19",
     "react-dom": "18",
     "zustand": "5.0.1"
   },
@@ -33,7 +33,7 @@
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.3.0",
     "@types/jest": "29.5.14",
-    "@types/react": "18.2.62",
+    "@types/react": "19.1.9",
     "@types/react-dom": "18.3.1",
     "@vitejs/plugin-react-swc": "3.10.1",
     "eslint-plugin-react": "7.37.5",
