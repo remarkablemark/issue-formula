@@ -29,6 +29,8 @@ export default function Edit() {
     if (DEV) {
       log.info('cancel');
     }
+
+    /* istanbul ignore else */
     if (formValues) {
       view.submit(oldFormValues);
     }
