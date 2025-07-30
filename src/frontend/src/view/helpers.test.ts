@@ -30,7 +30,7 @@ describe('transform', () => {
       ),
     ).toEqual([{ label: '', value: '' }]);
 
-    expect(log.error).toBeCalledTimes(1);
+    expect(log.error).toHaveBeenCalledTimes(1);
     spy.mockRestore();
   });
 });
