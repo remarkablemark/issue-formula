@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/remarkablemark/issue-formula/compare/v1.2.9...v1.3.0) (2025-08-01)
+
+
+### Features
+
+* **manifest:** add macro module ([817c099](https://github.com/remarkablemark/issue-formula/commit/817c09968236b3c8bd924070245a66db1ba19b68))
+
+
+### Bug Fixes
+
+* **manifest:** fix duplicate module key 'issue-formula' ([de148d1](https://github.com/remarkablemark/issue-formula/commit/de148d135d7f8e9bc3559afb7ba3bfa49936c486))
+
 ## [1.2.9](https://github.com/remarkablemark/issue-formula/compare/v1.2.8...v1.2.9) (2025-06-04)
 
 
