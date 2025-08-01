@@ -34,17 +34,23 @@ jobs:
       - name: Disable Forge telemetry
         run: npx forge settings set usage-analytics false
 
-      - name: Lint Forge app
-        run: npm run lint
-        env:
-          FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
-          FORGE_EMAIL: ${{ secrets.FORGE_EMAIL }}
+      - name: Run ESLint
+        run: npm run lint:js
 
-      - name: Type check Forge app
+      - name: Type check
         run: npm run lint:tsc
 
       - name: Build Forge app
         run: npm run build
+
+      - name: Lint Forge apps
+        run: |
+          npm run lint:forge
+          mv manifest.macro.yml manifest.yml
+          npm run lint:forge
+        env:
+          FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
+          FORGE_EMAIL: ${{ secrets.FORGE_EMAIL }}
 
       - name: Lint Storybook
         run: npm run --prefix=src/storybook lint

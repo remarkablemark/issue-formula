@@ -49,11 +49,11 @@ jobs:
       - name: Disable Forge telemetry
         run: npx forge settings set usage-analytics false
 
-      - name: Deploy app
-        run: >
-          npx forge deploy
-          --environment production
-          --non-interactive
+      - name: Deploy Jira and Confluence apps
+        run: |
+          npx forge deploy --environment production --non-interactive
+          mv manifest.macro.yml manifest.yml
+          npx forge deploy --environment production --non-interactive
         env:
           FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
           FORGE_EMAIL: ${{ secrets.FORGE_EMAIL }}
