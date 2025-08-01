@@ -5,7 +5,7 @@ modules:
       handler: index.handler
 
   jira:dashboardGadget:
-    - key: issue-formula
+    - key: issue-formula-gadget
       title: Issue Formula
       description: 'Calculate mathematical formulas with issue data.'
       thumbnail: 'https://raw.githubusercontent.com/remarkablemark/issue-formula/master/icon.svg'
@@ -17,7 +17,7 @@ modules:
         resource: main
 
   macro:
-    - key: issue-formula
+    - key: issue-formula-macro
       title: Issue Formula
       description: 'Calculate mathematical formulas with issue data.'
       thumbnail: 'https://raw.githubusercontent.com/remarkablemark/issue-formula/master/icon.svg'
