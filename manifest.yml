@@ -1,23 +1,39 @@
 # https://developer.atlassian.com/platform/forge/manifest-reference/
 modules:
+  function:
+    - key: issue-formula-resolver
+      handler: index.handler
+
   jira:dashboardGadget:
     - key: issue-formula
       title: Issue Formula
       description: 'Calculate mathematical formulas with issue data.'
-      thumbnail: https://raw.githubusercontent.com/remarkablemark/issue-formula/master/icon.svg
-      icon: https://raw.githubusercontent.com/remarkablemark/issue-formula/master/icon.svg
+      thumbnail: 'https://raw.githubusercontent.com/remarkablemark/issue-formula/master/icon.svg'
+      icon: 'https://raw.githubusercontent.com/remarkablemark/issue-formula/master/icon.svg'
       resource: main
       resolver:
         function: issue-formula-resolver
       edit:
         resource: main
-  function:
-    - key: issue-formula-resolver
-      handler: index.handler
+
+  macro:
+    - key: issue-formula
+      title: Issue Formula
+      description: 'Calculate mathematical formulas with issue data.'
+      thumbnail: 'https://raw.githubusercontent.com/remarkablemark/issue-formula/master/icon.svg'
+      icon: 'https://raw.githubusercontent.com/remarkablemark/issue-formula/master/icon.svg'
+      resource: main
+      resolver:
+        function: issue-formula-resolver
 
 resources:
   - key: main
     path: src/frontend/dist
+
+app:
+  id: 'ari:cloud:ecosystem::app/b61c9830-6619-4c99-9e7d-3cc0cdbf6423'
+  runtime:
+    name: nodejs20.x
 
 permissions:
   content:
@@ -25,8 +41,3 @@ permissions:
       - unsafe-inline
   scopes:
     - 'read:jira-work'
-
-app:
-  id: ari:cloud:ecosystem::app/b61c9830-6619-4c99-9e7d-3cc0cdbf6423
-  runtime:
-    name: nodejs20.x
