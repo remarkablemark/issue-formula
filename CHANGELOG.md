@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/remarkablemark/issue-formula/compare/v1.3.0...v1.4.0) (2025-08-02)
+
+
+### Features
+
+* add Confluence macro app ([4f85897](https://github.com/remarkablemark/issue-formula/commit/4f85897e8cadc86424573cb5480397b9d35b8577))
+
 ## [1.3.0](https://github.com/remarkablemark/issue-formula/compare/v1.2.9...v1.3.0) (2025-08-01)
 
 
