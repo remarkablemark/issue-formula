@@ -11,7 +11,7 @@ modules:
   macro:
     - key: issue-formula
       title: Issue Formula
-      description: 'Confluence app to calculate mathematical formulas with issue data.'
+      description: 'Confluence macro to calculate mathematical formulas with issue data.'
       thumbnail: 'https://raw.githubusercontent.com/remarkablemark/issue-formula/master/icon.svg'
       icon: 'https://raw.githubusercontent.com/remarkablemark/issue-formula/master/icon.svg'
       resource: main
