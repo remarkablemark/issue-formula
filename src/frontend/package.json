@@ -20,7 +20,7 @@
     "@atlaskit/icon": "27.9.0",
     "@atlaskit/primitives": "14.8.4",
     "@atlaskit/select": "21.2.6",
-    "@atlaskit/spinner": "19.0.0",
+    "@atlaskit/spinner": "19.0.3",
     "@atlaskit/textarea": "8.0.7",
     "@atlaskit/textfield": "8.0.7",
     "@forge/bridge": "5.3.0",
