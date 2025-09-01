@@ -60,19 +60,15 @@ describe('with data', () => {
       switch (true) {
         case fetchOptions.body.includes(formValues.jql[1]):
           (response.json as jest.Mock).mockResolvedValue({
-            startAt: 0,
-            maxResults: 0,
-            total: 1,
-            issues: [],
+            isLast: true,
+            issues: [{ id: '123456' }],
           });
           break;
 
         case fetchOptions.body.includes(formValues.jql[0]):
           (response.json as jest.Mock).mockResolvedValue({
-            startAt: 0,
-            maxResults: 0,
-            total: 3,
-            issues: [],
+            isLast: true,
+            issues: [{ id: '123456' }, { id: '234567' }, { id: '345678' }],
           });
           break;
       }

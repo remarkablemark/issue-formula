@@ -2,9 +2,9 @@
 
 exports[`requests jira when function value is "COUNT" 1`] = `
 [
-  "/rest/api/3/search",
+  "/rest/api/3/search/jql",
   {
-    "body": "{"jql":"test","maxResults":0}",
+    "body": "{"jql":"test","maxResults":5000}",
     "headers": {
       "Accept": "application/json",
       "Content-Type": "application/json",
@@ -16,7 +16,7 @@ exports[`requests jira when function value is "COUNT" 1`] = `
 
 exports[`requests jira when function value is "SUM" 1`] = `
 [
-  "/rest/api/3/search",
+  "/rest/api/3/search/jql",
   {
     "body": "{"jql":"test"}",
     "headers": {

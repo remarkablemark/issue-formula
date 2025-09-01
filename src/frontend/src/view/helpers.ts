@@ -54,7 +54,7 @@ export function getVariables(formValues: FormValues, issues: Issue[]) {
 
       switch (formValues.function[index].value) {
         case 'COUNT':
-          value = issues[index].total;
+          value = issues[index].issues.length;
           break;
       }
 
