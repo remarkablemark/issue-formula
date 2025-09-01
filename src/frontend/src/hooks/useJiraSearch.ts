@@ -2,7 +2,9 @@ import { requestJira } from '@forge/bridge';
 import { useEffect, useState } from 'react';
 
 import { log } from '../helpers';
-import { FormValues, Issue } from '../types';
+import type { FormValues, Issue } from '../types';
+
+const MAX_RESULTS = 5000;
 
 export function useJiraSearch(formValues: FormValues) {
   const [isLoading, setIsLoading] = useState(true);
@@ -14,7 +16,7 @@ export function useJiraSearch(formValues: FormValues) {
     }
 
     const requests = formValues.jql.map((jql, index) =>
-      requestJira('/rest/api/3/search', {
+      requestJira('/rest/api/3/search/jql', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -23,10 +25,13 @@ export function useJiraSearch(formValues: FormValues) {
         body: JSON.stringify({
           jql,
           maxResults:
-            formValues.function[index].value === 'COUNT' ? 0 : undefined,
+            formValues.function[index].value === 'COUNT'
+              ? MAX_RESULTS
+              : undefined,
         }),
       })
         .then((response) => response.json())
+        // TODO: fetch `nextPageToken` if there are more issues
         .catch(log.error),
     );
 
