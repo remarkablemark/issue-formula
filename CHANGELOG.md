@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/remarkablemark/issue-formula/compare/v1.4.0...v1.4.1) (2025-09-01)
+
+
+### Bug Fixes
+
+* **frontend:** replace deprecated Jira endpoint ([#822](https://github.com/remarkablemark/issue-formula/issues/822)) ([b6bae01](https://github.com/remarkablemark/issue-formula/commit/b6bae0199ed33db1e7f8a3e37ed97798da13d903)), closes [#792](https://github.com/remarkablemark/issue-formula/issues/792)
+
 ## [1.4.0](https://github.com/remarkablemark/issue-formula/compare/v1.3.0...v1.4.0) (2025-08-02)
 
 
