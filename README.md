@@ -4,7 +4,6 @@
 
 # Issue Formula
 
-[![jira](https://badgen.net/badge/jira/Issue%20Formula?icon&label)](https://marketplace.atlassian.com/1233729)
 [![release](https://img.shields.io/github/v/release/remarkablemark/issue-formula)](https://github.com/remarkablemark/issue-formula/releases)
 [![build](https://github.com/remarkablemark/issue-formula/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/issue-formula/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/remarkablemark/issue-formula/graph/badge.svg?token=GsBnfiZMCF)](https://codecov.io/gh/remarkablemark/issue-formula)
