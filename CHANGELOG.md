@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/remarkablemark/issue-formula/compare/v1.4.1...v1.4.2) (2025-11-19)
+
+
+### Bug Fixes
+
+* release 1.4.2 ([80cc6df](https://github.com/remarkablemark/issue-formula/commit/80cc6df7c44bf1cd1244ca70053ed04be1e4c28e)), closes [#1004](https://github.com/remarkablemark/issue-formula/issues/1004) [#1006](https://github.com/remarkablemark/issue-formula/issues/1006)
+
 ## [1.4.1](https://github.com/remarkablemark/issue-formula/compare/v1.4.0...v1.4.1) (2025-09-01)
 
 
