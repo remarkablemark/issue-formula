@@ -5,8 +5,10 @@ import AtlaskitTextField, {
 } from '@atlaskit/textfield';
 import type { ComponentProps } from 'react';
 
-export interface TextFieldProps
-  extends Omit<AtlaskitTextFieldProps, 'label' | 'validate'> {
+export interface TextFieldProps extends Omit<
+  AtlaskitTextFieldProps,
+  'label' | 'validate'
+> {
   name: string;
   label?: string | boolean;
   validate?: ComponentProps<typeof Field>['validate'];
