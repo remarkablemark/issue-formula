@@ -3,7 +3,7 @@ import { Box, xcss } from '@atlaskit/primitives';
 
 const containerStyles = xcss({
   alignItems: 'center',
-  borderRadius: 'border.radius.200',
+  borderRadius: 'radius.large',
   borderWidth: 'border.width',
   display: 'flex',
   height: 'size.1000',
