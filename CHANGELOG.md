@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.3](https://github.com/remarkablemark/issue-formula/compare/v1.4.2...v1.4.3) (2026-01-14)
+
+
+### Bug Fixes
+
+* **frontend:** correct borderRadius design token in Formula ([c343c7c](https://github.com/remarkablemark/issue-formula/commit/c343c7cf51a07a251ef1cfd18ead62aa2de26520))
+* **frontend:** ensure VariableField ErrorMessage is accessible ([1183fb1](https://github.com/remarkablemark/issue-formula/commit/1183fb1bcfdf20200b6ea20560c03b791602562d))
+
 ## [1.4.2](https://github.com/remarkablemark/issue-formula/compare/v1.4.1...v1.4.2) (2025-11-19)
 
 
