@@ -1,4 +1,4 @@
-import { ErrorMessage } from '@atlaskit/form';
+import { ErrorMessage, MessageWrapper } from '@atlaskit/form';
 import { useState } from 'react';
 
 import { useFormValuesStore } from '../../hooks';
@@ -40,7 +40,9 @@ export default function VariableField(props: Props) {
         isRequired
       />
 
-      {error && <ErrorMessage>{error}</ErrorMessage>}
+      <MessageWrapper>
+        {error && <ErrorMessage>{error}</ErrorMessage>}
+      </MessageWrapper>
     </>
   );
 }
