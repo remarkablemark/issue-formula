@@ -12,7 +12,7 @@
     "test:ci": "jest --ci --coverage --colors"
   },
   "dependencies": {
-    "@atlaskit/button": "23.9.3",
+    "@atlaskit/button": "23.9.4",
     "@atlaskit/code": "17.4.1",
     "@atlaskit/css-reset": "7.3.10",
     "@atlaskit/form": "15.3.0",
