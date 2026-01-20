@@ -21,7 +21,7 @@
     "@atlaskit/primitives": "17.1.1",
     "@atlaskit/select": "21.6.4",
     "@atlaskit/spinner": "19.0.9",
-    "@atlaskit/textarea": "8.2.1",
+    "@atlaskit/textarea": "8.2.2",
     "@atlaskit/textfield": "8.2.2",
     "@forge/bridge": "5.10.2",
     "expr-eval": "2.0.2",
