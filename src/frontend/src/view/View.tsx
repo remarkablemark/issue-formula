@@ -17,6 +17,7 @@ export default function View(props: Props) {
       templateColumns="1fr 1fr 1fr"
     >
       {props.data.map(({ label, value }, index) => (
+        // eslint-disable-next-line react-x/no-array-index-key
         <Formula label={label} value={value} key={index} />
       ))}
     </Grid>

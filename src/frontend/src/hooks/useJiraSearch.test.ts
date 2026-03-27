@@ -18,11 +18,9 @@ it.each(['COUNT', 'SUM'])(
   'requests jira when function value is %p',
   async (value) => {
     const mockResponse = { isLast: true, issues: [] };
-    mockedRequestJira.mockImplementationOnce(async () => {
-      return {
-        json: vi.fn().mockResolvedValue(mockResponse),
-      } as unknown as Response;
-    });
+    mockedRequestJira.mockResolvedValueOnce({
+      json: vi.fn().mockResolvedValue(mockResponse),
+    } as unknown as Response);
 
     const { result } = renderHook(() =>
       useJiraSearch({

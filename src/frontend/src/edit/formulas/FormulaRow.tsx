@@ -14,7 +14,7 @@ export default function FormulaRow(props: Props) {
   return (
     <Inline space="space.050">
       <TextArea
-        name={`formula[${props.index}]`}
+        name={`formula[${String(props.index)}]`}
         label={props.showLabel && 'Math Formula'}
         value={formValues.formula[props.index]}
         spellCheck={false}
@@ -30,7 +30,7 @@ export default function FormulaRow(props: Props) {
       />
 
       <TextArea
-        name={`label[${props.index}]`}
+        name={`label[${String(props.index)}]`}
         label={props.showLabel && 'Label'}
         value={formValues.label[props.index]}
         onChange={(event) => {
@@ -41,7 +41,7 @@ export default function FormulaRow(props: Props) {
       />
 
       <TextField
-        name={`decimal[${props.index}]`}
+        name={`decimal[${String(props.index)}]`}
         label={props.showLabel && 'Decimals'}
         value={formValues.decimal[props.index]}
         onChange={(event) => {
@@ -58,7 +58,7 @@ export default function FormulaRow(props: Props) {
       />
 
       <TextField
-        name={`prefix[${props.index}]`}
+        name={`prefix[${String(props.index)}]`}
         label={props.showLabel && 'Prefix'}
         value={formValues.prefix[props.index]}
         onChange={(event) => {
@@ -72,7 +72,7 @@ export default function FormulaRow(props: Props) {
       />
 
       <TextField
-        name={`suffix[${props.index}]`}
+        name={`suffix[${String(props.index)}]`}
         label={props.showLabel && 'Suffix'}
         value={formValues.suffix[props.index]}
         onChange={(event) => {
@@ -87,7 +87,9 @@ export default function FormulaRow(props: Props) {
 
       <DeleteButton
         label="Delete formula"
-        onClick={() => formValues.deleteFormula(props.index)}
+        onClick={() => {
+          formValues.deleteFormula(props.index);
+        }}
         offsetLabel={props.showLabel}
       />
     </Inline>

@@ -21,7 +21,7 @@ describe('error', () => {
     render(<VariableField {...props} />);
     // https://github.com/testing-library/react-testing-library/issues/924#issuecomment-856745092
     changeLabelValue(props.label, 'a');
-    changeLabelValue(props.label, value as string);
+    changeLabelValue(props.label, value!);
     expect(screen.queryByText(/Variable/)).not.toBeInTheDocument();
   });
 

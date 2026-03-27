@@ -12,7 +12,8 @@ export function useJiraSearch(formValues: FormValues) {
 
   useEffect(() => {
     if (!formValues.jql?.length) {
-      return setIsLoading(false);
+      setIsLoading(false);
+      return;
     }
 
     const requests = formValues.jql.map((jql, index) =>
@@ -40,7 +41,9 @@ export function useJiraSearch(formValues: FormValues) {
         setIssues(issues);
       })
       .catch(log.error)
-      .finally(() => setIsLoading(false));
+      .finally(() => {
+        setIsLoading(false);
+      });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

@@ -21,6 +21,7 @@ export default function Formulas() {
         }
       >
         {formula.map((_, index) => (
+          // eslint-disable-next-line react-x/no-array-index-key
           <FormulaRow key={index} index={index} showLabel={!index} />
         ))}
       </FormSection>

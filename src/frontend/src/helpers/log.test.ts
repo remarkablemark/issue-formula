@@ -14,13 +14,15 @@ const spies = METHODS.reduce(
 );
 
 afterAll(() => {
-  Object.entries(spies).forEach(([, spy]) => spy.mockRestore());
+  Object.entries(spies).forEach(([, spy]) => {
+    spy.mockRestore();
+  });
 });
 
 it.each(METHODS)('calls console.%s with prefix and message', async (method) => {
   const { log } = await import('./log');
   const message = 'message';
-  expect(log[method](message)).toBe(undefined);
+  log[method](message);
   expect(spies[method]).toHaveBeenCalledTimes(1);
   expect(spies[method]).toHaveBeenCalledWith(PREFIX, message);
 });
