@@ -1,11 +1,11 @@
 import { act } from '@testing-library/react';
 
 afterAll(() => {
-  jest.restoreAllMocks();
+  vi.restoreAllMocks();
 });
 
 it('renders without crashing', async () => {
-  const getElementByIdSpy = jest
+  const getElementByIdSpy = vi
     .spyOn(document, 'getElementById')
     .mockReturnValueOnce(document.createElement('div'));
 

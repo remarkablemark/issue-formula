@@ -4,7 +4,7 @@ import { renderHook, waitFor } from '@testing-library/react';
 import type { FormValues } from '../types';
 import { useJiraSearch } from './useJiraSearch';
 
-const mockedRequestJira = jest.mocked(requestJira);
+const mockedRequestJira = vi.mocked(requestJira);
 
 it('returns when formValues.jql is empty', () => {
   const { result } = renderHook(() => useJiraSearch({} as FormValues));
@@ -17,8 +17,11 @@ it('returns when formValues.jql is empty', () => {
 it.each(['COUNT', 'SUM'])(
   'requests jira when function value is %p',
   async (value) => {
+    const mockResponse = { isLast: true, issues: [] };
     mockedRequestJira.mockImplementationOnce(async () => {
-      return { json: jest.fn() } as unknown as Response;
+      return {
+        json: vi.fn().mockResolvedValue(mockResponse),
+      } as unknown as Response;
     });
 
     const { result } = renderHook(() =>
@@ -31,7 +34,7 @@ it.each(['COUNT', 'SUM'])(
     await waitFor(() => {
       expect(result.current).toEqual({
         isLoading: false,
-        issues: [],
+        issues: [mockResponse],
       });
     });
 

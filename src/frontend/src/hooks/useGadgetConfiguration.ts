@@ -22,16 +22,17 @@ export function useGadgetConfiguration(): Result {
     }
 
     (['formula', 'jql', 'label'] as const).forEach((key) => {
-      /* istanbul ignore next */
+      /* v8 ignore next */
       formValues[key]?.forEach((value, index) => {
         formValues[key][index] = decode(value);
       });
     });
 
-    /* istanbul ignore if */
+    /* v8 ignore start */
     if (DEV) {
       log.info('formValues:', formValues);
     }
+    /* v8 ignore stop */
 
     setFormValues(formValues);
   }, [formValues, setFormValues]);

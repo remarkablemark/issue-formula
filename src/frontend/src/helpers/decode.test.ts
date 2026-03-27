@@ -1,8 +1,8 @@
 import { decode } from './decode';
 import { log } from './log';
 
-jest.mock('./log', () => ({
-  log: { error: jest.fn() },
+vi.mock('./log', () => ({
+  log: { error: vi.fn() },
 }));
 
 it.each([

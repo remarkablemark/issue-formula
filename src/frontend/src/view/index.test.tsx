@@ -4,8 +4,8 @@ import { render, screen, waitFor } from '@testing-library/react';
 import type { FormValues, FullContext } from '../types';
 import View from '.';
 
-const mockedRequestJira = jest.mocked(requestJira);
-const mockedView = jest.mocked(view);
+const mockedRequestJira = vi.mocked(requestJira);
+const mockedView = vi.mocked(view);
 
 describe('without data', () => {
   beforeEach(() => {
@@ -51,7 +51,7 @@ describe('with data', () => {
     } as unknown as FullContext);
 
     mockedRequestJira.mockImplementation(async (_restPath, fetchOptions) => {
-      const response = { json: jest.fn() } as unknown as Response;
+      const response = { json: vi.fn() } as unknown as Response;
 
       if (typeof fetchOptions?.body != 'string') {
         return response;
@@ -59,14 +59,14 @@ describe('with data', () => {
 
       switch (true) {
         case fetchOptions.body.includes(formValues.jql[1]):
-          (response.json as jest.Mock).mockResolvedValue({
+          vi.mocked(response.json).mockResolvedValue({
             isLast: true,
             issues: [{ id: '123456' }],
           });
           break;
 
         case fetchOptions.body.includes(formValues.jql[0]):
-          (response.json as jest.Mock).mockResolvedValue({
+          vi.mocked(response.json).mockResolvedValue({
             isLast: true,
             issues: [{ id: '123456' }, { id: '234567' }, { id: '345678' }],
           });

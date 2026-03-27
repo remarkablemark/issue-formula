@@ -3,14 +3,14 @@ import { Parser } from 'expr-eval';
 import { log } from '../helpers';
 import { transform } from './helpers';
 
-jest.mock('../helpers', () => ({
-  log: { error: jest.fn() },
+vi.mock('../helpers', () => ({
+  log: { error: vi.fn() },
 }));
 
 describe('transform', () => {
   it('catches error', () => {
     const error = new Error();
-    const spy = jest.spyOn(Parser, 'evaluate').mockImplementation(() => {
+    const spy = vi.spyOn(Parser, 'evaluate').mockImplementation(() => {
       throw error;
     });
 

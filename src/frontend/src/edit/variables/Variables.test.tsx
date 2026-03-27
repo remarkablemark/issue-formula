@@ -4,11 +4,11 @@ import { clickButton } from '../../../test/helpers';
 import Variables from './Variables';
 
 const INPUT_COUNT_PER_ROW = 2;
-let consoleErrorSpy: jest.SpyInstance;
+let consoleErrorSpy: ReturnType<typeof vi.spyOn>;
 
 beforeAll(() => {
   // suppress React deprecated Context API error
-  consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation();
+  consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
 });
 
 afterAll(() => {

@@ -17,20 +17,22 @@ export default function Edit() {
   const formValues = useFormValues();
 
   const handleSubmit = useCallback(() => {
-    /* istanbul ignore if */
+    /* v8 ignore start */
     if (DEV) {
       log.info('submit:', formValues);
     }
+    /* v8 ignore stop */
+
     view.submit(formValues);
   }, [formValues]);
 
   const handleCancel = useCallback(() => {
-    /* istanbul ignore if */
+    /* v8 ignore start */
     if (DEV) {
       log.info('cancel');
     }
+    /* v8 ignore stop */
 
-    /* istanbul ignore else */
     if (formValues) {
       view.submit(oldFormValues);
     }

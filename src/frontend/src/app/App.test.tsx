@@ -4,10 +4,10 @@ import { render, screen, waitFor } from '@testing-library/react';
 import type { FullContext } from '../types';
 import App from './App';
 
-jest.mock('../edit', () => () => <>edit</>);
-jest.mock('../view', () => () => <>view</>);
+vi.mock('../edit', () => ({ default: () => <>edit</> }));
+vi.mock('../view', () => ({ default: () => <>view</> }));
 
-const mockedView = jest.mocked(view);
+const mockedView = vi.mocked(view);
 
 it('renders loading icon', () => {
   render(<App />);

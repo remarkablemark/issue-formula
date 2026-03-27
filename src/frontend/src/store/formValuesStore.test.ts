@@ -25,20 +25,30 @@ describe('updateFormValue', () => {
 
 describe('deleteVariable', () => {
   it('deletes variable', () => {
-    const {
-      result: { current: store },
-    } = renderHook(() => useFormValuesStore());
-    const index = 0;
+    // Start with fresh state by creating a new hook instance
+    const { result } = renderHook(() => useFormValuesStore());
 
+    // Add a variable first
     act(() => {
-      const value = 'value';
-      store.updateFormValue('variable', index, value);
-      expect(store.variable).toEqual([value]);
+      result.current.addVariable();
     });
 
+    // Verify variable was added
+    expect(result.current.variable).toHaveLength(1);
+
+    // Update the variable value
     act(() => {
-      store.deleteVariable(index);
-      expect(store.variable).toEqual([]);
+      result.current.updateFormValue('variable', 0, 'test-value');
     });
+
+    expect(result.current.variable).toEqual(['test-value']);
+
+    // Delete the variable
+    act(() => {
+      result.current.deleteVariable(0);
+    });
+
+    // Verify variable was deleted
+    expect(result.current.variable).toHaveLength(0);
   });
 });
