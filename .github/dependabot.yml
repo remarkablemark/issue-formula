@@ -16,21 +16,22 @@ updates:
       eslint:
         patterns:
           - '@eslint/*'
-      prettier:
-        patterns:
+          - 'eslint*'
           - prettier
-          - eslint-plugin-prettier
       react:
         patterns:
+          - '@types/react'
+          - '@types/react-dom'
           - react
           - react-dom
       storybook:
         patterns:
           - '@storybook/*'
           - storybook
-      typescript-eslint:
+      vite:
         patterns:
-          - '@typescript-eslint/*'
+          - '@vite*'
+          - 'vite*'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
