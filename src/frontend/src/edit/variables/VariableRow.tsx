@@ -17,14 +17,14 @@ export default function VariableRow(props: Props) {
   return (
     <Inline space="space.050">
       <VariableField
-        name={`variable[${props.index}]`}
+        name={`variable[${String(props.index)}]`}
         label={props.showLabel && 'Variable'}
         value={formValues.variable[props.index]}
         index={props.index}
       />
 
       <Field<string, HTMLSelectElement>
-        name={`function[${props.index}]`}
+        name={`function[${String(props.index)}]`}
         label={props.showLabel && 'Function'}
       >
         {({ fieldProps }) => (
@@ -42,7 +42,7 @@ export default function VariableRow(props: Props) {
               formValues.updateFormValue(
                 'function',
                 props.index,
-                event?.value || '',
+                event?.value ?? '',
               );
             }}
             /* v8 ignore stop */
@@ -52,7 +52,7 @@ export default function VariableRow(props: Props) {
       </Field>
 
       <TextArea
-        name={`jql[${props.index}]`}
+        name={`jql[${String(props.index)}]`}
         label={props.showLabel && 'JQL'}
         value={formValues.jql[props.index]}
         spellCheck={false}
@@ -64,7 +64,9 @@ export default function VariableRow(props: Props) {
 
       <DeleteButton
         label="Delete variable"
-        onClick={() => formValues.deleteVariable(props.index)}
+        onClick={() => {
+          formValues.deleteVariable(props.index);
+        }}
         offsetLabel={props.showLabel}
       />
     </Inline>

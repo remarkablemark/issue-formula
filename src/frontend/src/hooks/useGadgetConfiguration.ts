@@ -22,7 +22,6 @@ export function useGadgetConfiguration(): Result {
     }
 
     (['formula', 'jql', 'label'] as const).forEach((key) => {
-      /* v8 ignore next */
       formValues[key]?.forEach((value, index) => {
         formValues[key][index] = decode(value);
       });

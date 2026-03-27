@@ -1,4 +1,4 @@
-import('@atlaskit/css-reset');
+import '@atlaskit/css-reset';
 
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';

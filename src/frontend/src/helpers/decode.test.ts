@@ -21,7 +21,9 @@ it.each([undefined, null, {}, [], true, false, 0, 1, () => {}, new Date()])(
   'does not decode invalid %p',
   (input) => {
     expect(decode(input as string)).toBe(input);
-    expect(log.error).toHaveBeenCalledTimes(1);
-    expect(log.error).toHaveBeenCalledWith(`Invalid string: ${input}`);
+    expect(log.error).toHaveBeenCalledExactlyOnceWith(
+      // eslint-disable-next-line @typescript-eslint/no-base-to-string, @typescript-eslint/restrict-template-expressions
+      `Invalid string: ${input}`,
+    );
   },
 );

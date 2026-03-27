@@ -46,7 +46,7 @@ export function getVariables(formValues: FormValues, issues: Issue[]) {
   return formValues.variable.reduce(
     (accumulator: Record<string, number>, variable, index) => {
       let value = NaN;
-      const issue = issues[index];
+      const issue = issues[index] as Issue | undefined;
 
       if (!issue) {
         return accumulator;

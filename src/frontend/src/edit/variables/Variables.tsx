@@ -21,6 +21,7 @@ export default function Variables() {
         }
       >
         {variable.map((_, index) => (
+          // eslint-disable-next-line react-x/no-array-index-key
           <VariableRow key={index} index={index} showLabel={!index} />
         ))}
       </FormSection>

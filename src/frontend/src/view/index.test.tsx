@@ -50,6 +50,7 @@ describe('with data', () => {
       extension: { gadgetConfiguration: formValues },
     } as unknown as FullContext);
 
+    // eslint-disable-next-line @typescript-eslint/require-await
     mockedRequestJira.mockImplementation(async (_restPath, fetchOptions) => {
       const response = { json: vi.fn() } as unknown as Response;
 
@@ -59,6 +60,7 @@ describe('with data', () => {
 
       switch (true) {
         case fetchOptions.body.includes(formValues.jql[1]):
+          // eslint-disable-next-line @typescript-eslint/unbound-method
           vi.mocked(response.json).mockResolvedValue({
             isLast: true,
             issues: [{ id: '123456' }],
@@ -66,6 +68,7 @@ describe('with data', () => {
           break;
 
         case fetchOptions.body.includes(formValues.jql[0]):
+          // eslint-disable-next-line @typescript-eslint/unbound-method
           vi.mocked(response.json).mockResolvedValue({
             isLast: true,
             issues: [{ id: '123456' }, { id: '234567' }, { id: '345678' }],

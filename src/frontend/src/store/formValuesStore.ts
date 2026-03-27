@@ -37,7 +37,7 @@ export const useFormValuesStore = create<State>()((set) => ({
   ...variableInitialState,
   ...formulaInitialState,
 
-  setFormValues: (formValues) =>
+  setFormValues: (formValues) => {
     set(() => {
       // backfill variable if missing
       (Object.keys(variableInitialState) as VariableKey[]).forEach(
@@ -62,9 +62,10 @@ export const useFormValuesStore = create<State>()((set) => ({
       );
 
       return formValues;
-    }),
+    });
+  },
 
-  updateFormValue: (key: VariableKey | FormulaKey, index, value) =>
+  updateFormValue: (key: VariableKey | FormulaKey, index, value) => {
     set((state) => {
       const newState = { ...state };
       if (key === 'function') {
@@ -73,9 +74,10 @@ export const useFormValuesStore = create<State>()((set) => ({
         newState[key][index] = value;
       }
       return newState;
-    }),
+    });
+  },
 
-  addVariable: () =>
+  addVariable: () => {
     set((state) => ({
       variable: state.variable.concat(''),
       function: state.function.concat({
@@ -83,38 +85,42 @@ export const useFormValuesStore = create<State>()((set) => ({
         value: 'COUNT',
       }),
       jql: state.jql.concat(''),
-    })),
+    }));
+  },
 
-  deleteVariable: (index) =>
+  deleteVariable: (index) => {
     set((state) => {
       const newState = { ...state };
       const variableKeys = Object.keys(variableInitialState) as VariableKey[];
       variableKeys.forEach((variableKey) => {
+        // eslint-disable-next-line @typescript-eslint/no-array-delete, @typescript-eslint/no-dynamic-delete
         delete newState[variableKey][index];
         // @ts-expect-error valid type
         newState[variableKey] = newState[variableKey].filter(
-          /* v8 ignore next */
           (value) => value !== undefined,
         );
       });
       return newState;
-    }),
+    });
+  },
 
-  addFormula: () =>
+  addFormula: () => {
     set((state) => ({
       formula: state.formula.concat(''),
       label: state.label.concat(''),
       decimal: state.decimal.concat('0'),
       prefix: state.prefix.concat(''),
       suffix: state.suffix.concat(''),
-    })),
+    }));
+  },
 
-  deleteFormula: (index) =>
+  deleteFormula: (index) => {
     set((state) => ({
       formula: state.formula.filter((_, idx) => idx !== index),
       label: state.label.filter((_, idx) => idx !== index),
       decimal: state.decimal.filter((_, idx) => idx !== index),
       prefix: state.prefix.filter((_, idx) => idx !== index),
       suffix: state.suffix.filter((_, idx) => idx !== index),
-    })),
+    }));
+  },
 }));

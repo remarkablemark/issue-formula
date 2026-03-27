@@ -23,7 +23,7 @@ export default function Edit() {
     }
     /* v8 ignore stop */
 
-    view.submit(formValues);
+    void view.submit(formValues);
   }, [formValues]);
 
   const handleCancel = useCallback(() => {
@@ -34,7 +34,7 @@ export default function Edit() {
     /* v8 ignore stop */
 
     if (formValues) {
-      view.submit(oldFormValues);
+      void view.submit(oldFormValues);
     }
   }, [formValues, oldFormValues]);
 

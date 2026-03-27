@@ -20,13 +20,19 @@ export function TextField(props: TextFieldProps) {
 
   return (
     <Box style={{ width }}>
-      <Field<string, HTMLInputElement>
-        name={name}
-        label={label}
-        validate={validate}
-      >
+      <Field name={name} label={label} validate={validate}>
         {({ fieldProps }) => (
-          <AtlaskitTextField {...fieldProps} {...restProps} />
+          <AtlaskitTextField
+            {...fieldProps}
+            value={
+              fieldProps.value as
+                | string
+                | number
+                | readonly string[]
+                | undefined
+            }
+            {...restProps}
+          />
         )}
       </Field>
     </Box>
