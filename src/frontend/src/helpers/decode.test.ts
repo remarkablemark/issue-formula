@@ -1,5 +1,3 @@
-import { vi } from 'vitest';
-
 import { decode } from './decode';
 import { log } from './log';
 

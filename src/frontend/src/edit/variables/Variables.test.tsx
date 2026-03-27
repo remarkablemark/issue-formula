@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import { afterAll, beforeAll, vi } from 'vitest';
 
 import { clickButton } from '../../../test/helpers';
 import Variables from './Variables';

@@ -1,6 +1,5 @@
 import { view } from '@forge/bridge';
 import { render, screen, waitFor } from '@testing-library/react';
-import { afterAll, beforeAll, vi } from 'vitest';
 
 import { changeLabelValue, clickButton } from '../../test/helpers';
 import type { FormValues, FullContext } from '../types';

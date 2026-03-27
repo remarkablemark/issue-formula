@@ -1,6 +1,5 @@
 import { requestJira } from '@forge/bridge';
 import { renderHook, waitFor } from '@testing-library/react';
-import { vi } from 'vitest';
 
 import type { FormValues } from '../types';
 import { useJiraSearch } from './useJiraSearch';

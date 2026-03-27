@@ -1,5 +1,3 @@
-import { afterAll, vi } from 'vitest';
-
 import { NAME, VERSION } from '../env';
 
 const PREFIX = `[${NAME}@${VERSION}]`;

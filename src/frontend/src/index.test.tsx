@@ -1,5 +1,4 @@
 import { act } from '@testing-library/react';
-import { afterAll, vi } from 'vitest';
 
 afterAll(() => {
   vi.restoreAllMocks();

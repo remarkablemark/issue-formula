@@ -1,6 +1,5 @@
 import { requestJira, view } from '@forge/bridge';
 import { render, screen, waitFor } from '@testing-library/react';
-import { vi } from 'vitest';
 
 import type { FormValues, FullContext } from '../types';
 import View from '.';

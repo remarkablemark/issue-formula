@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import { afterAll, beforeAll, vi } from 'vitest';
 
 import { changeLabelValue } from '../../../test/helpers';
 import VariableRow from './VariableRow';

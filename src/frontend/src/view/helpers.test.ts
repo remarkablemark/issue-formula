@@ -1,5 +1,4 @@
 import { Parser } from 'expr-eval';
-import { vi } from 'vitest';
 
 import { log } from '../helpers';
 import { transform } from './helpers';

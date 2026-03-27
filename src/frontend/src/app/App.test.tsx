@@ -1,6 +1,5 @@
 import { view } from '@forge/bridge';
 import { render, screen, waitFor } from '@testing-library/react';
-import { vi } from 'vitest';
 
 import type { FullContext } from '../types';
 import App from './App';

@@ -5,7 +5,6 @@
 import '@testing-library/jest-dom';
 
 import { act, renderHook } from '@testing-library/react';
-import { afterEach, vi } from 'vitest';
 
 import { useFormValuesStore } from '../src/store';
 import type { FormValues } from '../src/types';
