@@ -1,5 +1,5 @@
 import { IconButton, type IconButtonProps } from '@atlaskit/button/new';
-import CrossCircleIcon from '@atlaskit/icon/glyph/cross-circle';
+import CrossCircleIcon from '@atlaskit/icon/core/cross-circle';
 import { Box } from '@atlaskit/primitives';
 
 interface Props extends Omit<IconButtonProps, 'icon'> {

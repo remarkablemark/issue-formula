@@ -1,5 +1,4 @@
 import ButtonGroup from '@atlaskit/button/button-group';
-import LoadingButton from '@atlaskit/button/loading-button';
 import Button from '@atlaskit/button/new';
 import Form, { FormFooter } from '@atlaskit/form';
 import { view } from '@forge/bridge';
@@ -47,13 +46,9 @@ export default function Edit() {
 
           <FormFooter align="start">
             <ButtonGroup label="Form submit options">
-              <LoadingButton
-                type="submit"
-                appearance="primary"
-                isLoading={submitting}
-              >
+              <Button type="submit" appearance="primary" isLoading={submitting}>
                 Save
-              </LoadingButton>
+              </Button>
 
               <Button onClick={handleCancel}>Cancel</Button>
             </ButtonGroup>
