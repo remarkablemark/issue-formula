@@ -1,15 +1,14 @@
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 
 import { useGadgetConfiguration } from '../hooks';
 import Edit from '.';
 
-jest.mock('../hooks', () => ({
-  useGadgetConfiguration: jest.fn(),
-}));
+vi.mock('../hooks', () => ({ useGadgetConfiguration: vi.fn() }));
 
-jest.mock('./Edit', () => () => <>Edit</>);
+vi.mock('./Edit', () => ({ default: () => <>Edit</> }));
 
-const mockedUseGadgetConfiguration = jest.mocked(useGadgetConfiguration);
+const mockedUseGadgetConfiguration = vi.mocked(useGadgetConfiguration);
 
 it('renders loading icon', () => {
   mockedUseGadgetConfiguration.mockReturnValue({ isLoading: true });

@@ -1,16 +1,17 @@
 import { view } from '@forge/bridge';
 import { render, screen, waitFor } from '@testing-library/react';
+import { afterAll, beforeAll, vi } from 'vitest';
 
 import { changeLabelValue, clickButton } from '../../test/helpers';
 import type { FormValues, FullContext } from '../types';
 import Edit from './Edit';
 
-const mockedView = jest.mocked(view);
-let consoleErrorSpy: jest.SpyInstance;
+const mockedView = vi.mocked(view);
+let consoleErrorSpy: ReturnType<typeof vi.spyOn>;
 
 beforeAll(() => {
   // suppress React deprecated Context API error
-  consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation();
+  consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
 });
 
 afterAll(() => {
