@@ -30,11 +30,11 @@ export default function Edit() {
     if (DEV) {
       log.info('cancel');
     }
-    /* v8 ignore stop */
 
     if (formValues) {
       void view.submit(oldFormValues);
     }
+    /* v8 ignore stop */
   }, [formValues, oldFormValues]);
 
   return (
