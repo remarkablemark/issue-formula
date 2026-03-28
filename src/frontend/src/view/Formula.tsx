@@ -1,20 +1,6 @@
 import Heading from '@atlaskit/heading';
-import { Box, xcss } from '@atlaskit/primitives';
-
-const containerStyles = xcss({
-  alignItems: 'center',
-  borderRadius: 'radius.large',
-  borderWidth: 'border.width',
-  display: 'flex',
-  height: 'size.1000',
-  justifyContent: 'center',
-  padding: 'space.100',
-  textAlign: 'center',
-});
-
-const valueStyles = xcss({
-  color: 'color.text.accent.green',
-});
+import { Box } from '@atlaskit/primitives';
+import { token } from '@atlaskit/tokens';
 
 interface Props {
   label: string;
@@ -25,13 +11,22 @@ export default function Formula(props: Props) {
   return (
     <Box
       backgroundColor="color.background.neutral.hovered"
-      xcss={containerStyles}
+      padding="space.100"
+      style={{
+        alignItems: 'center',
+        borderRadius: token('radius.large', '0.5rem'),
+        borderWidth: token('border.width', '0.0625rem'),
+        display: 'flex',
+        height: '12rem',
+        justifyContent: 'center',
+        textAlign: 'center',
+      }}
     >
       <div>
         <Heading as="h1" size="xxlarge">
-          <Box as="span" xcss={valueStyles}>
+          <span style={{ color: token('color.text.accent.green', '#216E4E') }}>
             {props.value}
-          </Box>
+          </span>
         </Heading>
 
         <br />

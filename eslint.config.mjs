@@ -91,7 +91,6 @@ export default tseslint.config(
     },
 
     rules: {
-      '@typescript-eslint/no-deprecated': 'off',
       '@typescript-eslint/no-empty-function': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-unnecessary-condition': 'off',
