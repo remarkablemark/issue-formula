@@ -15,7 +15,7 @@ it('returns when formValues.jql is empty', () => {
 });
 
 it.each(['COUNT', 'SUM'])(
-  'requests jira when function value is %p',
+  'requests jira when function value is %s',
   async (value) => {
     const mockResponse = { isLast: true, issues: [] };
     mockedRequestJira.mockResolvedValueOnce({

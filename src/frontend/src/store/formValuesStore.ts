@@ -97,6 +97,7 @@ export const useFormValuesStore = create<State>()((set) => ({
         delete newState[variableKey][index];
         // @ts-expect-error valid type
         newState[variableKey] = newState[variableKey].filter(
+          /* v8 ignore next */
           (value) => value !== undefined,
         );
       });
