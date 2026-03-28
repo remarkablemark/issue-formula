@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.4](https://github.com/remarkablemark/issue-formula/compare/v1.4.3...v1.4.4) (2026-03-28)
+
+
+### Miscellaneous Chores
+
+* release 1.4.4 ([7348e89](https://github.com/remarkablemark/issue-formula/commit/7348e892064ecd7056607302cbcbd26b4e7556a3)), closes [#1243](https://github.com/remarkablemark/issue-formula/issues/1243)
+
 ## [1.4.3](https://github.com/remarkablemark/issue-formula/compare/v1.4.2...v1.4.3) (2026-01-14)
 
 
