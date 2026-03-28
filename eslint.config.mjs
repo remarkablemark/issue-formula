@@ -18,8 +18,6 @@ const rootDir = import.meta.dirname;
 export default tseslint.config(
   includeIgnoreFile(gitignorePath),
 
-  { ignores: ['coverage/', 'dist/'] },
-
   // Files that should NOT use type-checked rules (not covered by tsconfig.json)
   {
     files: [
