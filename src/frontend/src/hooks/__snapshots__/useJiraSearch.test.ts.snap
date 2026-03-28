@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`requests jira when function value is %p COUNT 1`] = `
+exports[`requests jira when function value is COUNT 1`] = `
 [
   "/rest/api/3/search/jql",
   {
@@ -14,7 +14,7 @@ exports[`requests jira when function value is %p COUNT 1`] = `
 ]
 `;
 
-exports[`requests jira when function value is %p SUM 1`] = `
+exports[`requests jira when function value is SUM 1`] = `
 [
   "/rest/api/3/search/jql",
   {
