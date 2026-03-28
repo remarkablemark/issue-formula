@@ -1,12 +1,11 @@
 name: build
 on: [push, pull_request]
 
-permissions:
-  contents: read
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout repository
@@ -19,9 +18,7 @@ jobs:
           node-version-file: .nvmrc
 
       - name: Install dependencies
-        run: |
-          npm ci --prefer-offline
-          npm ci --prefer-offline --prefix src/storybook
+        run: npm ci --prefer-offline
 
       - name: Run tests
         run: npm test
@@ -49,8 +46,34 @@ jobs:
           FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
           FORGE_EMAIL: ${{ secrets.FORGE_EMAIL }}
 
+  storybook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: npm
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --prefix src/storybook
+
       - name: Lint Storybook
         run: npm run --prefix=src/storybook lint
 
       - name: Build Storybook
         run: npm run --prefix=src/storybook build-storybook
+        env:
+          BASE: /${{ github.event.repository.name }}/
+
+      - name: Deploy
+        if: github.ref_name == 'master'
+        uses: remarkablemark/gitploy-action@v1
+        with:
+          directory: src/storybook/storybook-static

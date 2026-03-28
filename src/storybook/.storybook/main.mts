@@ -40,6 +40,7 @@ const config: StorybookConfig = {
 
   viteFinal(config) {
     return mergeConfig(config, {
+      base: process.env.BASE || '/',
       resolve: {
         alias: {
           '@forge/bridge': resolve(__dirname, '../__mocks__/@forge/bridge'),
