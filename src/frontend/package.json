@@ -22,7 +22,7 @@
     "@atlaskit/select": "21.10.2",
     "@atlaskit/spinner": "19.0.13",
     "@atlaskit/textarea": "8.2.6",
-    "@atlaskit/textfield": "8.3.0",
+    "@atlaskit/textfield": "8.3.1",
     "@atlaskit/tokens": "11.4.2",
     "@forge/bridge": "5.15.0",
     "expr-eval": "2.0.2",
