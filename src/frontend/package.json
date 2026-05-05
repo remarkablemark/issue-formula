@@ -12,7 +12,7 @@
     "test:ci": "vitest run --coverage"
   },
   "dependencies": {
-    "@atlaskit/button": "23.11.3",
+    "@atlaskit/button": "23.11.4",
     "@atlaskit/code": "17.5.1",
     "@atlaskit/css-reset": "7.4.5",
     "@atlaskit/form": "15.5.5",
