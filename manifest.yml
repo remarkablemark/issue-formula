@@ -1,7 +1,7 @@
 app:
   id: 'ari:cloud:ecosystem::app/b61c9830-6619-4c99-9e7d-3cc0cdbf6423'
   runtime:
-    name: nodejs20.x
+    name: nodejs22.x
 
 modules:
   function:
