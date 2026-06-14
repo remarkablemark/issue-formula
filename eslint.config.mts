@@ -22,7 +22,7 @@ export default defineConfig(
   {
     files: [
       '**/*.mjs',
-      'eslint.config.mjs',
+      'eslint.config.mts',
       'src/index.js',
       'src/backend/**/*.js',
       'src/frontend/scripts/**/*.js',
