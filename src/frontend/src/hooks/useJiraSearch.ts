@@ -7,12 +7,12 @@ import type { FormValues, Issue } from '../types';
 const MAX_RESULTS = 5000;
 
 export function useJiraSearch(formValues: FormValues) {
-  const [isLoading, setIsLoading] = useState(true);
+  const hasJql = formValues.jql?.length > 0;
+  const [isLoading, setIsLoading] = useState(hasJql);
   const [issues, setIssues] = useState<Issue[]>([]);
 
   useEffect(() => {
-    if (!formValues.jql?.length) {
-      setIsLoading(false);
+    if (!hasJql) {
       return;
     }
 
@@ -44,7 +44,7 @@ export function useJiraSearch(formValues: FormValues) {
       .finally(() => {
         setIsLoading(false);
       });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps, react-x/exhaustive-deps
   }, []);
 
   return {

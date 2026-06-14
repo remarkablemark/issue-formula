@@ -1,7 +1,7 @@
 import { fileURLToPath } from 'node:url';
 
-import { includeIgnoreFile } from '@eslint/compat';
-import eslint from '@eslint/js';
+import js from '@eslint/js';
+import { defineConfig, includeIgnoreFile } from 'eslint/config';
 import prettier from 'eslint-plugin-prettier';
 import reactDom from 'eslint-plugin-react-dom';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -15,7 +15,7 @@ import tseslint from 'typescript-eslint';
 const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url));
 const rootDir = import.meta.dirname;
 
-export default tseslint.config(
+export default defineConfig(
   includeIgnoreFile(gitignorePath),
 
   // Files that should NOT use type-checked rules (not covered by tsconfig.json)
@@ -31,16 +31,19 @@ export default tseslint.config(
 
     plugins: {
       'simple-import-sort': simpleImportSort,
-      eslint,
+      js,
       prettier,
       tsdoc,
     },
 
-    extends: [eslint.configs.recommended, tseslint.configs.recommended],
+    extends: [js.configs.recommended, tseslint.configs.recommended],
 
     languageOptions: {
       globals: {
         ...globals.node,
+      },
+      parserOptions: {
+        tsconfigRootDir: rootDir,
       },
     },
 
@@ -59,13 +62,13 @@ export default tseslint.config(
 
     plugins: {
       'simple-import-sort': simpleImportSort,
-      eslint,
+      js,
       prettier,
       tsdoc,
     },
 
     extends: [
-      eslint.configs.recommended,
+      js.configs.recommended,
       reactDom.configs.recommended,
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
