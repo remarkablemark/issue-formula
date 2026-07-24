@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.5](https://github.com/remarkablemark/issue-formula/compare/v1.4.4...v1.4.5) (2026-07-24)
+
+
+### Build System
+
+* **manifest:** upgrade Node.js runtime from 20 to 22 ([0073a33](https://github.com/remarkablemark/issue-formula/commit/0073a33710c2f178d4ac1122bc8828325749ee5a)), closes [#1394](https://github.com/remarkablemark/issue-formula/issues/1394)
+
 ## [1.4.4](https://github.com/remarkablemark/issue-formula/compare/v1.4.3...v1.4.4) (2026-03-28)
 
 
