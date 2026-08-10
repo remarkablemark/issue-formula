@@ -26,10 +26,7 @@ export function TextField(props: TextFieldProps) {
             {...fieldProps}
             value={
               fieldProps.value as
-                | string
-                | number
-                | readonly string[]
-                | undefined
+                string | number | readonly string[] | undefined
             }
             {...restProps}
           />
