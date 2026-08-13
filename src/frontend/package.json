@@ -14,7 +14,7 @@
   "dependencies": {
     "@atlaskit/button": "24.1.0",
     "@atlaskit/code": "18.0.0",
-    "@atlaskit/css-reset": "8.0.0",
+    "@atlaskit/css-reset": "8.1.2",
     "@atlaskit/form": "16.1.5",
     "@atlaskit/heading": "5.4.2",
     "@atlaskit/icon": "37.3.0",
