@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.4.5 (2026-10-27)
+
+
+### Bug Fixes
+
+* **frontend:** correct borderRadius design token in Formula ([c343c7c](https://github.com/remarkablemark/issue-formula/commit/c343c7cf51a07a251ef1cfd18ead62aa2de26520))
+* **frontend:** ensure VariableField ErrorMessage is accessible ([1183fb1](https://github.com/remarkablemark/issue-formula/commit/1183fb1bcfdf20200b6ea20560c03b791602562d))
+
+
+### Miscellaneous Chores
+
+* release 1.4.4 ([7348e89](https://github.com/remarkablemark/issue-formula/commit/7348e892064ecd7056607302cbcbd26b4e7556a3)), closes [#1243](https://github.com/remarkablemark/issue-formula/issues/1243)
+
+
+### Build System
+
+* **manifest:** upgrade Node.js runtime from 20 to 22 ([0073a33](https://github.com/remarkablemark/issue-formula/commit/0073a33710c2f178d4ac1122bc8828325749ee5a)), closes [#1394](https://github.com/remarkablemark/issue-formula/issues/1394)
+
 ## [1.4.4](https://github.com/remarkablemark/issue-formula/compare/v1.4.3...v1.4.4) (2026-03-28)
 
 
