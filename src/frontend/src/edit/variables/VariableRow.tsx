@@ -38,15 +38,15 @@ export default function VariableRow(props: Props) {
             ]}
             value={formValues.function[props.index]}
             /* v8 ignore start */
-            onChange={(event?: { value: string }) => {
+            onChange={(newValue) => {
               formValues.updateFormValue(
                 'function',
                 props.index,
-                event?.value ?? '',
+                newValue?.value ?? '',
               );
             }}
             /* v8 ignore stop */
-            required
+            isRequired
           />
         )}
       </Field>
