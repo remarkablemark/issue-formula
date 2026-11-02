@@ -2,7 +2,6 @@
 # package ecosystems to update and where the package manifests are located.
 # Please see the documentation for all configuration options:
 # https://docs.github.com/code-security/reference/supply-chain-security/dependabot-options-reference
-#
 
 version: 2
 updates:
@@ -21,12 +20,18 @@ updates:
       react:
         patterns:
           - '*react*'
-      storybook:
-        patterns:
-          - '*storybook*'
       vite:
         patterns:
           - '*vite*'
+
+  - package-ecosystem: 'npm'
+    directory: '/src/storybook'
+    schedule:
+      interval: 'daily'
+    groups:
+      storybook:
+        patterns:
+          - '*storybook*'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
