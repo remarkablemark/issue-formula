@@ -6,7 +6,7 @@
     "clean": "rm -rf dist",
     "lint": "npm run clean && eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "lint:tsc": "tsc --noEmit",
+    "lint:tsc": "tsc",
     "start": "vite --open",
     "test": "vitest",
     "test:ci": "vitest run --coverage"
