@@ -3,10 +3,29 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   base: './',
+
   build: {
+    rolldownOptions: {
+      output: {
+        codeSplitting: {
+          groups: [
+            {
+              name: 'atlaskit',
+              test: /node_modules\/@atlaskit\//,
+            },
+            {
+              name: 'react',
+              test: /node_modules\/(react|react-dom)\//,
+            },
+          ],
+        },
+      },
+    },
     sourcemap: true,
   },
+
   plugins: [react()],
+
   test: {
     environment: 'jsdom',
     globals: true,
