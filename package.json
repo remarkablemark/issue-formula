@@ -30,7 +30,6 @@
     "eslint-plugin-react-x": "5.28.8",
     "eslint-plugin-simple-import-sort": "14.0.0",
     "eslint-plugin-tsdoc": "0.5.4",
-    "globals": "17.11.0",
     "husky": "9.1.7",
     "lint-staged": "17.3.0",
     "prettier": "3.9.10",

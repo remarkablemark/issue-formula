@@ -9,7 +9,6 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 import reactX from 'eslint-plugin-react-x';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import tsdoc from 'eslint-plugin-tsdoc';
-import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url));
@@ -39,9 +38,6 @@ export default defineConfig(
     extends: [js.configs.recommended, tseslint.configs.recommended],
 
     languageOptions: {
-      globals: {
-        ...globals.node,
-      },
       parserOptions: {
         tsconfigRootDir: rootDir,
       },
@@ -80,11 +76,6 @@ export default defineConfig(
     ],
 
     languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        ...globals.vitest,
-      },
       parserOptions: {
         projectService: true,
         tsconfigRootDir: rootDir,
