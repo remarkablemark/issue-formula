@@ -2,14 +2,15 @@
   "name": "frontend",
   "private": true,
   "scripts": {
-    "build": "scripts/generate-env.js && vite build",
+    "build": "node scripts/generate-env.js && vite build",
     "clean": "rm -rf dist",
     "lint": "npm run clean && eslint .",
     "lint:fix": "npm run lint -- --fix",
     "lint:tsc": "tsc",
     "start": "vite --open",
-    "test": "vitest",
-    "test:ci": "vitest run --coverage"
+    "test": "vitest run",
+    "test:ci": "CI=true npm test -- --color --coverage",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@atlaskit/button": "25.6.1",

@@ -14,6 +14,7 @@
     "lint:tsc": "npm run lint:tsc --workspace=frontend",
     "login": "forge login",
     "prepare": "husky",
+    "start": "npm start --prefix=src/storybook",
     "storybook": "npm run storybook --prefix=src/storybook",
     "test": "npm run test:ci --workspace=frontend"
   },

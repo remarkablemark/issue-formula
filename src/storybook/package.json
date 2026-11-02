@@ -1,13 +1,13 @@
 {
   "name": "storybook",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "npm run storybook",
     "dev": "vite",
     "lint": "eslint . && tsc -b",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "BROWSER=none storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
