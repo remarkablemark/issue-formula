@@ -17,7 +17,7 @@ describe('without data', () => {
   it('renders loading icon', async () => {
     render(<View />);
     await waitFor(() => {
-      expect(screen.getByLabelText('Loading')).toBeInTheDocument();
+      expect(screen.getByLabelText('Loading')).toBeVisible();
     });
   });
 
@@ -83,7 +83,7 @@ describe('with data', () => {
   it('renders loading icon', async () => {
     render(<View />);
     await waitFor(() => {
-      expect(screen.getByLabelText('Loading')).toBeInTheDocument();
+      expect(screen.getByLabelText('Loading')).toBeVisible();
     });
   });
 
@@ -95,9 +95,9 @@ describe('with data', () => {
 
     expect(
       screen.getByRole('heading', { level: 1, name: '33.33%' }),
-    ).toBeInTheDocument();
+    ).toBeVisible();
     expect(
       screen.getByRole('heading', { level: 2, name: formValues.label[0] }),
-    ).toBeInTheDocument();
+    ).toBeVisible();
   });
 });

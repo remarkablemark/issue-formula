@@ -22,20 +22,18 @@ const props = {
 it('renders labels', () => {
   render(<VariableRow {...props} />);
   ['Variable', 'Function', 'JQL'].forEach((label) => {
-    expect(screen.getByLabelText(label)).toBeInTheDocument();
+    expect(screen.getByLabelText(label)).toBeVisible();
   });
 });
 
 it('renders button', () => {
   render(<VariableRow {...props} />);
-  expect(
-    screen.getByRole('button', { name: 'Delete variable' }),
-  ).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: 'Delete variable' })).toBeVisible();
 });
 
 it('selects option', () => {
   render(<VariableRow {...props} />);
   const value = 'test';
   changeLabelValue('Function', value);
-  expect(screen.getByDisplayValue(value)).toBeInTheDocument();
+  expect(screen.getByDisplayValue(value)).toBeVisible();
 });

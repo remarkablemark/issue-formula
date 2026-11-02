@@ -18,7 +18,7 @@ it.each([
 });
 
 it.each([undefined, null, {}, [], true, false, 0, 1, () => {}, new Date()])(
-  'does not decode invalid %p',
+  'does not decode invalid %s',
   (input) => {
     expect(decode(input as string)).toBe(input);
     expect(log.error).toHaveBeenCalledExactlyOnceWith(

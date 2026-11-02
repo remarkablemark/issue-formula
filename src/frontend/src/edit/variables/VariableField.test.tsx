@@ -11,13 +11,11 @@ const props = {
 
 it('renders textarea', () => {
   render(<VariableField {...props} />);
-  expect(
-    screen.getByRole('textbox', { name: props.label }),
-  ).toBeInTheDocument();
+  expect(screen.getByRole('textbox', { name: props.label })).toBeVisible();
 });
 
 describe('error', () => {
-  it.each([undefined, null, ''])('does not render error for %p', (value) => {
+  it.each([undefined, null, ''])('does not render error for %s', (value) => {
     render(<VariableField {...props} />);
     // https://github.com/testing-library/react-testing-library/issues/924#issuecomment-856745092
     changeLabelValue(props.label, 'a');
@@ -28,9 +26,7 @@ describe('error', () => {
   it('validates variable starts with a letter', () => {
     render(<VariableField {...props} />);
     changeLabelValue(props.label, '0');
-    expect(
-      screen.getByText('Variable must start with a letter'),
-    ).toBeInTheDocument();
+    expect(screen.getByText('Variable must start with a letter')).toBeVisible();
   });
 
   it('validates variable does not contain whitespace', () => {
@@ -38,7 +34,7 @@ describe('error', () => {
     changeLabelValue(props.label, 'a ');
     expect(
       screen.getByText('Variable must not contain whitespace'),
-    ).toBeInTheDocument();
+    ).toBeVisible();
   });
 
   it('validates variable does not contain special characters', () => {
@@ -46,6 +42,6 @@ describe('error', () => {
     changeLabelValue(props.label, 'a$');
     expect(
       screen.getByText('Variable must not contain special characters'),
-    ).toBeInTheDocument();
+    ).toBeVisible();
   });
 });

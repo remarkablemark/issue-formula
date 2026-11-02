@@ -11,7 +11,7 @@ const mockedView = vi.mocked(view);
 
 it('renders loading icon', () => {
   render(<App />);
-  expect(screen.getByLabelText('Loading')).toBeInTheDocument();
+  expect(screen.getByLabelText('Loading')).toBeVisible();
 });
 
 it.each(['edit', 'view'])('renders %s', async (entryPoint) => {
@@ -20,6 +20,6 @@ it.each(['edit', 'view'])('renders %s', async (entryPoint) => {
   } as unknown as FullContext);
   render(<App />);
   await waitFor(() => {
-    expect(screen.getByText(entryPoint)).toBeInTheDocument();
+    expect(screen.getByText(entryPoint)).toBeVisible();
   });
 });

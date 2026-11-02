@@ -23,22 +23,19 @@ beforeEach(() => {
 it('renders heading', () => {
   expect(
     screen.getByRole('heading', { level: 3, name: 'Variables' }),
-  ).toBeInTheDocument();
+  ).toBeVisible();
 });
 
 it('renders button', () => {
-  expect(
-    screen.getByRole('button', { name: 'Add variable' }),
-  ).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: 'Add variable' })).toBeVisible();
 });
 
 it('adds variable', () => {
   clickButton('Add variable');
   expect(screen.getAllByRole('textbox')).toHaveLength(INPUT_COUNT_PER_ROW);
   ['Variable', 'Function', 'JQL'].forEach((label) => {
-    expect(screen.getByLabelText(label)).toBeInTheDocument();
+    expect(screen.getByLabelText(label)).toBeVisible();
   });
-  // Function
   expect(screen.getByDisplayValue('COUNT')).toBeInTheDocument();
 });
 

@@ -13,23 +13,21 @@ beforeEach(() => {
 it('renders heading', () => {
   expect(
     screen.getByRole('heading', { level: 3, name: 'Formulas' }),
-  ).toBeInTheDocument();
+  ).toBeVisible();
 });
 
 it('renders button', () => {
-  expect(
-    screen.getByRole('button', { name: 'Add formula' }),
-  ).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: 'Add formula' })).toBeVisible();
 });
 
 it('adds formula', () => {
   clickButton('Add formula');
   expect(screen.getAllByRole('textbox')).toHaveLength(INPUT_COUNT_PER_ROW);
   ['Math Formula', 'Label', 'Decimals', 'Prefix', 'Suffix'].forEach((label) => {
-    expect(screen.getByLabelText(label)).toBeInTheDocument();
+    expect(screen.getByLabelText(label)).toBeVisible();
   });
   // Decimals
-  expect(screen.getByDisplayValue('0')).toBeInTheDocument();
+  expect(screen.getByDisplayValue('0')).toBeVisible();
 });
 
 it('adds formula', () => {

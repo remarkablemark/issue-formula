@@ -30,11 +30,11 @@ describe('without data', () => {
   });
 
   it.each(['Variables', 'Formulas'])('renders heading %s', (name) => {
-    expect(screen.getByRole('heading', { level: 3, name })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 3, name })).toBeVisible();
   });
 
   it.each(['Save', 'Cancel'])('renders button %s', (name) => {
-    expect(screen.getByRole('button', { name })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name })).toBeVisible();
   });
 
   it('submits variable and formula', () => {

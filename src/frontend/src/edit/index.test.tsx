@@ -12,11 +12,11 @@ const mockedUseGadgetConfiguration = vi.mocked(useGadgetConfiguration);
 it('renders loading icon', () => {
   mockedUseGadgetConfiguration.mockReturnValue({ isLoading: true });
   render(<Edit />);
-  expect(screen.getByLabelText('Loading')).toBeInTheDocument();
+  expect(screen.getByLabelText('Loading')).toBeVisible();
 });
 
 it('renders edit', () => {
   mockedUseGadgetConfiguration.mockReturnValue({ isLoading: false });
   render(<Edit />);
-  expect(screen.getByText('Edit')).toBeInTheDocument();
+  expect(screen.getByText('Edit')).toBeVisible();
 });
