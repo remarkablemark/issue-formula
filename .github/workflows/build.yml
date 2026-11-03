@@ -71,7 +71,7 @@ jobs:
         run: npm run --prefix=src/storybook lint
 
       - name: Build Storybook
-        run: npm run --prefix=src/storybook build-storybook
+        run: npm run --prefix=src/storybook build
         env:
           BASE: /${{ github.event.repository.name }}/
 
