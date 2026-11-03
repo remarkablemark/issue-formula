@@ -1,3 +1,5 @@
+import type { Mock } from 'vitest';
+
 import { NAME, VERSION } from '../env';
 
 const PREFIX = `[${NAME}@${VERSION}]`;
@@ -5,9 +7,7 @@ const METHODS = ['error', 'info', 'warn'] as const;
 
 const spies = METHODS.reduce(
   (accumulator, method) => {
-    accumulator[method] = vi
-      .spyOn(console, method)
-      .mockImplementation(() => {});
+    accumulator[method] = vi.spyOn(console, method).mockImplementation(vi.fn());
     return accumulator;
   },
   {} as Record<(typeof METHODS)[number], ReturnType<typeof vi.spyOn>>,
@@ -15,7 +15,7 @@ const spies = METHODS.reduce(
 
 afterAll(() => {
   Object.entries(spies).forEach(([, spy]) => {
-    spy.mockRestore();
+    (spy as Mock).mockRestore();
   });
 });
 

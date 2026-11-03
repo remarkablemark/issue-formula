@@ -13,6 +13,7 @@ export default function ViewContext() {
     return <Spinner label="Loading" />;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   if (!formValues.variable?.length || !formValues.formula?.length) {
     return null;
   }

@@ -42,8 +42,10 @@ export const useFormValuesStore = create<State>()((set) => ({
       // backfill variable if missing
       (Object.keys(variableInitialState) as VariableKey[]).forEach(
         (variableKey) => {
+          // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
           if (!formValues[variableKey]) {
             formValues[variableKey] = new Array(
+              // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
               formValues.variable?.length || 0,
             ).fill('');
           }
@@ -53,8 +55,11 @@ export const useFormValuesStore = create<State>()((set) => ({
       // backfill formula if missing
       (Object.keys(formulaInitialState) as FormulaKey[]).forEach(
         (formulaKey) => {
+          // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
           if (!formValues[formulaKey]) {
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
             formValues[formulaKey] = new Array(
+              // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
               formValues.formula?.length || 0,
             ).fill('');
           }
@@ -98,7 +103,7 @@ export const useFormValuesStore = create<State>()((set) => ({
         // @ts-expect-error valid type
         newState[variableKey] = newState[variableKey].filter(
           /* v8 ignore next */
-          (value) => value !== undefined,
+          (value) => value !== undefined, // eslint-disable-line @typescript-eslint/no-unnecessary-condition
         );
       });
       return newState;

@@ -31,6 +31,7 @@ export default function Edit() {
       log.info('cancel');
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (formValues) {
       void view.submit(oldFormValues);
     }

@@ -75,13 +75,6 @@ export default defineConfig(
     },
 
     rules: {
-      '@typescript-eslint/no-empty-function': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'off',
-      '@typescript-eslint/no-unnecessary-condition': 'off',
-      '@typescript-eslint/no-unsafe-argument': 'off',
-      '@typescript-eslint/no-unsafe-assignment': 'off',
-      '@typescript-eslint/no-unsafe-call': 'off',
-      '@typescript-eslint/no-unsafe-member-access': 'off',
       'no-console': 'error',
       'prettier/prettier': 'error',
       'simple-import-sort/exports': 'error',

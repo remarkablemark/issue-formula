@@ -14,14 +14,17 @@ interface Result {
 export function useGadgetConfiguration(): Result {
   const context = useForgeContext();
   const { setFormValues } = useFormValuesStore();
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const formValues: FormValues = context?.extension.gadgetConfiguration;
 
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (!formValues) {
       return;
     }
 
     (['formula', 'jql', 'label'] as const).forEach((key) => {
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       formValues[key]?.forEach((value, index) => {
         formValues[key][index] = decode(value);
       });

@@ -1,14 +1,15 @@
 import { render, screen } from '@testing-library/react';
+import type { Mock } from 'vitest';
 
 import { clickButton } from '../../../test/helpers';
 import Variables from './Variables';
 
 const INPUT_COUNT_PER_ROW = 2;
-let consoleErrorSpy: ReturnType<typeof vi.spyOn>;
+let consoleErrorSpy: Mock;
 
 beforeAll(() => {
   // suppress React deprecated Context API error
-  consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+  consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(vi.fn());
 });
 
 afterAll(() => {
@@ -40,8 +41,10 @@ it('adds variable', () => {
 });
 
 it('adds variable', () => {
-  const rows = 2;
-  [...Array(rows)].forEach(() => clickButton('Add variable'));
+  let rows = 0;
+  for (; rows < 2; rows++) {
+    clickButton('Add variable');
+  }
   expect(screen.getAllByRole('textbox')).toHaveLength(
     INPUT_COUNT_PER_ROW * rows,
   );

@@ -19,6 +19,7 @@ describe('error', () => {
     render(<VariableField {...props} />);
     // https://github.com/testing-library/react-testing-library/issues/924#issuecomment-856745092
     changeLabelValue(props.label, 'a');
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     changeLabelValue(props.label, value!);
     expect(screen.queryByText(/Variable/)).not.toBeInTheDocument();
   });

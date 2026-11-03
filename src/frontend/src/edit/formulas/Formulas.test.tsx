@@ -31,8 +31,10 @@ it('adds formula', () => {
 });
 
 it('adds formula', () => {
-  const rows = 2;
-  [...Array(rows)].forEach(() => clickButton('Add formula'));
+  let rows = 0;
+  for (; rows < 2; rows++) {
+    clickButton('Add formula');
+  }
   expect(screen.getAllByRole('textbox')).toHaveLength(
     INPUT_COUNT_PER_ROW * rows,
   );

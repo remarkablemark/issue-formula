@@ -7,6 +7,7 @@ import type { FormValues, Issue } from '../types';
 const MAX_RESULTS = 5000;
 
 export function useJiraSearch(formValues: FormValues) {
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   const hasJql = formValues.jql?.length > 0;
   const [isLoading, setIsLoading] = useState(hasJql);
   const [issues, setIssues] = useState<Issue[]>([]);

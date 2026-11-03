@@ -1,13 +1,14 @@
 import { render, screen } from '@testing-library/react';
+import type { Mock } from 'vitest';
 
 import { changeLabelValue } from '../../../test/helpers';
 import VariableRow from './VariableRow';
 
-let consoleErrorSpy: ReturnType<typeof vi.spyOn>;
+let consoleErrorSpy: Mock;
 
 beforeAll(() => {
   // suppress React deprecated Context API error
-  consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+  consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(vi.fn());
 });
 
 afterAll(() => {

@@ -17,6 +17,7 @@ it.each([
   expect(decode(input)).toBe(output);
 });
 
+// eslint-disable-next-line @typescript-eslint/no-empty-function
 it.each([undefined, null, {}, [], true, false, 0, 1, () => {}, new Date()])(
   'does not decode invalid %s',
   (input) => {

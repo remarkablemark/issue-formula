@@ -1,16 +1,17 @@
 import { view } from '@forge/bridge';
 import { render, screen, waitFor } from '@testing-library/react';
+import type { Mock } from 'vitest';
 
 import { changeLabelValue, clickButton } from '../../test/helpers';
 import type { FormValues, FullContext } from '../types';
 import Edit from './Edit';
 
 const mockedView = vi.mocked(view);
-let consoleErrorSpy: ReturnType<typeof vi.spyOn>;
+let consoleErrorSpy: Mock;
 
 beforeAll(() => {
   // suppress React deprecated Context API error
-  consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+  consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(vi.fn());
 });
 
 afterAll(() => {
@@ -94,8 +95,9 @@ describe('with data', () => {
   it('renders inputs', () => {
     Object.values(formValues).forEach(([value]) => {
       if (typeof value !== 'string') {
-        value = value.value;
+        value = (value as FormValues['function'][0]).value;
       }
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       expect(screen.getByDisplayValue(value)).toBeInTheDocument();
     });
   });
