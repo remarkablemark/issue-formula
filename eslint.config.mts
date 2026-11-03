@@ -30,7 +30,6 @@ export default defineConfig(
 
     plugins: {
       'simple-import-sort': simpleImportSort,
-      js,
       prettier,
       tsdoc,
     },
@@ -45,10 +44,10 @@ export default defineConfig(
 
     rules: {
       'no-console': 'error',
-      'no-debugger': 'error',
       'prettier/prettier': 'error',
       'simple-import-sort/exports': 'error',
       'simple-import-sort/imports': 'error',
+      'tsdoc/syntax': 'error',
     },
   },
 
@@ -58,7 +57,6 @@ export default defineConfig(
 
     plugins: {
       'simple-import-sort': simpleImportSort,
-      js,
       prettier,
       tsdoc,
     },
@@ -69,8 +67,6 @@ export default defineConfig(
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
       reactX.configs['recommended-typescript'],
-      tseslint.configs.recommended,
-      tseslint.configs.recommendedTypeChecked,
       tseslint.configs.strictTypeChecked,
       tseslint.configs.stylisticTypeChecked,
     ],
@@ -83,18 +79,11 @@ export default defineConfig(
     },
 
     rules: {
-      '@typescript-eslint/no-empty-function': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'off',
-      '@typescript-eslint/no-unnecessary-condition': 'off',
-      '@typescript-eslint/no-unsafe-argument': 'off',
-      '@typescript-eslint/no-unsafe-assignment': 'off',
-      '@typescript-eslint/no-unsafe-call': 'off',
-      '@typescript-eslint/no-unsafe-member-access': 'off',
       'no-console': 'error',
-      'no-debugger': 'error',
       'prettier/prettier': 'error',
       'simple-import-sort/exports': 'error',
       'simple-import-sort/imports': 'error',
+      'tsdoc/syntax': 'error',
     },
   },
 );
