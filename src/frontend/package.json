@@ -27,8 +27,8 @@
     "@atlaskit/tokens": "20.9.0",
     "@forge/bridge": "7.2.1",
     "expr-eval": "2.0.2",
-    "react": "18",
-    "react-dom": "18",
+    "react": "19",
+    "react-dom": "19",
     "zustand": "5.0.16"
   },
   "devDependencies": {
