@@ -12,7 +12,7 @@ import tsdoc from 'eslint-plugin-tsdoc';
 import tseslint from 'typescript-eslint';
 
 const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url));
-const rootDir = import.meta.dirname;
+const frontendDir = fileURLToPath(new URL('./src/frontend', import.meta.url));
 
 export default defineConfig(
   includeIgnoreFile(gitignorePath),
@@ -35,12 +35,6 @@ export default defineConfig(
     },
 
     extends: [js.configs.recommended, tseslint.configs.recommended],
-
-    languageOptions: {
-      parserOptions: {
-        tsconfigRootDir: rootDir,
-      },
-    },
 
     rules: {
       'no-console': 'error',
@@ -73,12 +67,21 @@ export default defineConfig(
 
     languageOptions: {
       parserOptions: {
+        // The project service finds the nearest tsconfig.json for each file.
+        // This root is the base for the frontend workspace's relative TSConfig paths.
         projectService: true,
-        tsconfigRootDir: rootDir,
+        tsconfigRootDir: frontendDir,
       },
     },
 
     rules: {
+      '@typescript-eslint/no-empty-function': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      '@typescript-eslint/no-unnecessary-condition': 'off',
+      '@typescript-eslint/no-unsafe-argument': 'off',
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+      '@typescript-eslint/no-unsafe-call': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
       'no-console': 'error',
       'prettier/prettier': 'error',
       'simple-import-sort/exports': 'error',

@@ -1,3 +1,4 @@
-npx lint-staged
+npm run lint
 npm run lint:tsc
 npm test
+npx lint-staged
