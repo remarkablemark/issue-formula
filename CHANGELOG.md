@@ -1,59 +1,61 @@
 # Changelog
 
-## [1.4.4](https://github.com/remarkablemark/issue-formula/compare/v1.4.3...v1.4.4) (2026-03-28)
+## [1.4.5](https://github.com/remarkablemark/issue-formula/compare/v1.4.4...v1.4.5) (2026-11-03)
 
+### Performance Improvements
 
-### Miscellaneous Chores
-
-* release 1.4.4 ([7348e89](https://github.com/remarkablemark/issue-formula/commit/7348e892064ecd7056607302cbcbd26b4e7556a3)), closes [#1243](https://github.com/remarkablemark/issue-formula/issues/1243)
-
-## [1.4.3](https://github.com/remarkablemark/issue-formula/compare/v1.4.2...v1.4.3) (2026-01-14)
-
-
-### Bug Fixes
-
-* **frontend:** correct borderRadius design token in Formula ([c343c7c](https://github.com/remarkablemark/issue-formula/commit/c343c7cf51a07a251ef1cfd18ead62aa2de26520))
-* **frontend:** ensure VariableField ErrorMessage is accessible ([1183fb1](https://github.com/remarkablemark/issue-formula/commit/1183fb1bcfdf20200b6ea20560c03b791602562d))
-
-## [1.4.2](https://github.com/remarkablemark/issue-formula/compare/v1.4.1...v1.4.2) (2025-11-19)
-
-
-### Bug Fixes
-
-* release 1.4.2 ([80cc6df](https://github.com/remarkablemark/issue-formula/commit/80cc6df7c44bf1cd1244ca70053ed04be1e4c28e)), closes [#1004](https://github.com/remarkablemark/issue-formula/issues/1004) [#1006](https://github.com/remarkablemark/issue-formula/issues/1006)
-
-## [1.4.1](https://github.com/remarkablemark/issue-formula/compare/v1.4.0...v1.4.1) (2025-09-01)
-
-
-### Bug Fixes
-
-* **frontend:** replace deprecated Jira endpoint ([#822](https://github.com/remarkablemark/issue-formula/issues/822)) ([b6bae01](https://github.com/remarkablemark/issue-formula/commit/b6bae0199ed33db1e7f8a3e37ed97798da13d903)), closes [#792](https://github.com/remarkablemark/issue-formula/issues/792)
-
-## [1.4.0](https://github.com/remarkablemark/issue-formula/compare/v1.3.0...v1.4.0) (2025-08-02)
-
-
-### Features
-
-* add Confluence macro app ([4f85897](https://github.com/remarkablemark/issue-formula/commit/4f85897e8cadc86424573cb5480397b9d35b8577))
-
-## [1.3.0](https://github.com/remarkablemark/issue-formula/compare/v1.2.9...v1.3.0) (2025-08-01)
-
-
-### Features
-
-* **manifest:** add macro module ([817c099](https://github.com/remarkablemark/issue-formula/commit/817c09968236b3c8bd924070245a66db1ba19b68))
-
-
-### Bug Fixes
-
-* **manifest:** fix duplicate module key 'issue-formula' ([de148d1](https://github.com/remarkablemark/issue-formula/commit/de148d135d7f8e9bc3559afb7ba3bfa49936c486))
-
-## [1.2.9](https://github.com/remarkablemark/issue-formula/compare/v1.2.8...v1.2.9) (2025-06-04)
-
+- **frontend:** code split atlaskit and react ([270c39a](https://github.com/remarkablemark/issue-formula/commit/270c39a001f08eb85a3ed9aafb9cc38c5dcba571))
 
 ### Build System
 
-* **manifest:** upgrade Node.js runtime from 18 to 20 ([1e661be](https://github.com/remarkablemark/issue-formula/commit/1e661be5c1838aca5bbf9b56f51224a0ada622da)), closes [#694](https://github.com/remarkablemark/issue-formula/issues/694)
+- **manifest:** upgrade Node.js runtime from 20 to 22 ([0073a33](https://github.com/remarkablemark/issue-formula/commit/0073a33710c2f178d4ac1122bc8828325749ee5a)), closes [#1394](https://github.com/remarkablemark/issue-formula/issues/1394)
+
+## [1.4.4](https://github.com/remarkablemark/issue-formula/compare/v1.4.3...v1.4.4) (2026-03-28)
+
+### Miscellaneous Chores
+
+- release 1.4.4 ([7348e89](https://github.com/remarkablemark/issue-formula/commit/7348e892064ecd7056607302cbcbd26b4e7556a3)), closes [#1243](https://github.com/remarkablemark/issue-formula/issues/1243)
+
+## [1.4.3](https://github.com/remarkablemark/issue-formula/compare/v1.4.2...v1.4.3) (2026-01-14)
+
+### Bug Fixes
+
+- **frontend:** correct borderRadius design token in Formula ([c343c7c](https://github.com/remarkablemark/issue-formula/commit/c343c7cf51a07a251ef1cfd18ead62aa2de26520))
+- **frontend:** ensure VariableField ErrorMessage is accessible ([1183fb1](https://github.com/remarkablemark/issue-formula/commit/1183fb1bcfdf20200b6ea20560c03b791602562d))
+
+## [1.4.2](https://github.com/remarkablemark/issue-formula/compare/v1.4.1...v1.4.2) (2025-11-19)
+
+### Bug Fixes
+
+- release 1.4.2 ([80cc6df](https://github.com/remarkablemark/issue-formula/commit/80cc6df7c44bf1cd1244ca70053ed04be1e4c28e)), closes [#1004](https://github.com/remarkablemark/issue-formula/issues/1004) [#1006](https://github.com/remarkablemark/issue-formula/issues/1006)
+
+## [1.4.1](https://github.com/remarkablemark/issue-formula/compare/v1.4.0...v1.4.1) (2025-09-01)
+
+### Bug Fixes
+
+- **frontend:** replace deprecated Jira endpoint ([#822](https://github.com/remarkablemark/issue-formula/issues/822)) ([b6bae01](https://github.com/remarkablemark/issue-formula/commit/b6bae0199ed33db1e7f8a3e37ed97798da13d903)), closes [#792](https://github.com/remarkablemark/issue-formula/issues/792)
+
+## [1.4.0](https://github.com/remarkablemark/issue-formula/compare/v1.3.0...v1.4.0) (2025-08-02)
+
+### Features
+
+- add Confluence macro app ([4f85897](https://github.com/remarkablemark/issue-formula/commit/4f85897e8cadc86424573cb5480397b9d35b8577))
+
+## [1.3.0](https://github.com/remarkablemark/issue-formula/compare/v1.2.9...v1.3.0) (2025-08-01)
+
+### Features
+
+- **manifest:** add macro module ([817c099](https://github.com/remarkablemark/issue-formula/commit/817c09968236b3c8bd924070245a66db1ba19b68))
+
+### Bug Fixes
+
+- **manifest:** fix duplicate module key 'issue-formula' ([de148d1](https://github.com/remarkablemark/issue-formula/commit/de148d135d7f8e9bc3559afb7ba3bfa49936c486))
+
+## [1.2.9](https://github.com/remarkablemark/issue-formula/compare/v1.2.8...v1.2.9) (2025-06-04)
+
+### Build System
+
+- **manifest:** upgrade Node.js runtime from 18 to 20 ([1e661be](https://github.com/remarkablemark/issue-formula/commit/1e661be5c1838aca5bbf9b56f51224a0ada622da)), closes [#694](https://github.com/remarkablemark/issue-formula/issues/694)
 
 ## [1.2.8](https://github.com/remarkablemark/issue-formula/compare/v1.2.7...v1.2.8) (2024-11-23)
 
