@@ -11,7 +11,7 @@
     "build": "storybook build"
   },
   "dependencies": {
-    "@atlaskit/css-reset": "8.4.8",
+    "@atlaskit/css-reset": "8.4.10",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
