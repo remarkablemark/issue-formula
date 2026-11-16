@@ -25,7 +25,7 @@
     "@atlaskit/textarea": "10.3.0",
     "@atlaskit/textfield": "10.3.0",
     "@atlaskit/tokens": "20.10.0",
-    "@forge/bridge": "7.2.1",
+    "@forge/bridge": "7.3.0",
     "expr-eval": "2.0.2",
     "react": "18",
     "react-dom": "18",
